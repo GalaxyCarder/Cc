@@ -7,14 +7,14 @@ bot=telebot.TeleBot(token,parse_mode="HTML")
 
 @bot.message_handler(commands=["start"])
 def start(message):
-	bot.reply_to(message,"Send the file now \n Send the file now")
+	bot.reply_to(message,"𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑻𝑯𝑬 𝑮𝑨𝑳𝑨𝑿𝒀 𝑪𝑨𝑹𝑫𝑬𝑹 𝑪𝑪 𝑪𝑯𝑬𝑪𝑲𝑬𝑹  \n 𝙎𝙀𝙉𝘿 𝙈𝙀 𝙔𝙊𝙐𝙍 𝘾𝙊𝙈𝘽𝙊 𝙄 𝙒𝙄𝙇𝙇 𝘾𝙃𝙀𝘾𝙆 𝙔𝙊𝙐𝙍 𝘾𝘾 🔥 \n ᵈᵉᵛˡᵒᵖᵉᵈ ᵇʸ @Galaxy_Carder")
 @bot.message_handler(content_types=["document"])
 def main(message):
 	dd = 0
 	live = 0
 	ch = 0
 	last = 0
-	ko = (bot.reply_to(message, "Checking Your Cards...⌛").message_id)
+	ko = (bot.reply_to(message, "𝑪𝒉𝒆𝒄𝒌𝒊𝒏𝒈 𝒀𝒐𝒖𝒓 𝑪𝒂𝒓𝒅𝒔...⌛").message_id)
 	ee = bot.download_file(bot.get_file(message.document.file_id).file_path)
 	with open("combo.txt", "wb") as w:
 		w.write(ee)
@@ -56,12 +56,12 @@ def main(message):
 				mes = types.InlineKeyboardMarkup(row_width=1)
 				cm1 = types.InlineKeyboardButton(f"• {cc} •", callback_data='u8')
 				hh = types.InlineKeyboardButton(f"• {last} •", callback_data='u8')
-				cm2 = types.InlineKeyboardButton(f"• CHARGED ✅: [ {ch} ] •", callback_data='x')
-				cm3 = types.InlineKeyboardButton(f"• Live ✅ : [ {live} ] •", callback_data='x')
-				cm4 = types.InlineKeyboardButton(f"• DEAD ❌ : [ {dd} ] •", callback_data='x')
-				cm5 = types.InlineKeyboardButton(f"• TOTAL 👻 : [ {total} ] •", callback_data='x')
+				cm2 = types.InlineKeyboardButton(f"• 𝑪𝑯𝑨𝑹𝑮𝑬𝑫 💲: [ {ch} ] •", callback_data='x')
+				cm3 = types.InlineKeyboardButton(f"• 𝑳𝑰𝑽𝑬 ✅ : [ {live} ] •", callback_data='x')
+				cm4 = types.InlineKeyboardButton(f"• 𝑫𝑬𝑨𝑫 ❌ : [ {dd} ] •", callback_data='x')
+				cm5 = types.InlineKeyboardButton(f"• 𝑻𝑶𝑻𝑨𝑳 🔥 : [ {total} ] •", callback_data='x')
 				mes.add(hh,cm1, cm2, cm3, cm4, cm5)
-				bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='''Wait for processing 
+				bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='''𝑾𝒂𝒊𝒕 𝒇𝒐𝒓 𝒑𝒓𝒐𝒄𝒆𝒔𝒔𝒊𝒏𝒈  
 𝒃𝒚 ➜ @Galaxy_Carder ''', reply_markup=mes)
 				
 				try:
@@ -72,7 +72,7 @@ def main(message):
 						last = str(Tele(cc))
 					except Exception as e:
 						print(e)
-						last = "Your card was declined."
+						last = "𝒀𝒐𝒖𝒓 𝒄𝒂𝒓𝒅 𝒘𝒂𝒔 𝒅𝒆𝒄𝒍𝒊𝒏𝒆𝒅."
 				
 				msg = f'''◆ 𝑪𝑨𝑹𝑫  ➜ {cc} 
 ◆ 𝑺𝑻𝑨𝑻𝑼𝑺 ➜ 𝗔𝗽𝗽𝗿𝗼𝘃𝗲𝗱  ✅ 
